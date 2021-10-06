@@ -1,0 +1,12 @@
+FROM openjdk:15
+
+WORKDIR /app
+
+COPY demo.war .
+
+
+# expose container port for outer world
+EXPOSE 8585
+
+# Run the web service on container startup.
+CMD java  -jar demo.war
